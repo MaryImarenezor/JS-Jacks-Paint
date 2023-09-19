@@ -1,5 +1,5 @@
 function configureListeners() {
-    let images = document.getElementById("img");  
+    let images = document.getElementByTagName("img");  
 
 
      for (var i = 0; i < images.length; i++) {        
@@ -11,7 +11,7 @@ function configureListeners() {
 
 function addOpacity(event) {
     // add appropriate CSS class
-    if (this.classList.contains('dim')) {
+    if (!this.classList.contains('dim')) {
         this.classList.add('dim');
     }
     getProductInfo(event.target.id);     
